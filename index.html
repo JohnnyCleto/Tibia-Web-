@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tibia Fan Site</title>
+    <link rel="stylesheet" href="Css/styles.css">
+    <link rel="icon" type="image/favicon" href="imagens/fotos/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagens/fotos/logo.png" alt="Logo Tibia Fan Site">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#informacoes">Informações</a></li>
+                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="menu-icon">
+                <span>&#9776;</span>
+            </div>
+        </nav>
+    </header>
+    <main>            
+
+        <h2>Galeria de Imagens</h2>
+        <div id="galeria" class="gallery">
+            <div class="gallery">
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="imagens/fotos/tibia1.jpg" alt="Image 1" onclick="openLightbox(0)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagens/fotos/tibia2.jpg" alt="Image 2" onclick="openLightbox(1)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagens/fotos/tibia3.jpg" alt="Image 3" onclick="openLightbox(2)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagens/fotos/img_jogo.jpg" alt="Image 3" onclick="openLightbox(3)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagens/fotos/img_jogo1.jpg" alt="Image 3" onclick="openLightbox(4)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagens/fotos/img_jogo2.jpg" alt="Image 3" onclick="openLightbox(5)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagens/fotos/img_jogo3.jpg" alt="Image 3" onclick="openLightbox(6)">
+                    </div>
+                </div>
+                
+                <div id="lightbox" class="lightbox">
+                    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+                    <img class="lightbox-content" id="lightbox-img">
+                    <a class="lightbox-prev" onclick="changeImage(-1)">&#10094;</a>
+                    <a class="lightbox-next" onclick="changeImage(1)">&#10095;</a>
+                </div>
+            </div>
+        </div>
+        <div id="informacoes" class="text-columns">
+            <div class="column">
+                <h3>SOBRE</h3>
+                <p>Tibia é um jogo eletrônico de RPG multijogador (MMORPG) gratuito, desenvolvido pela CipSoft. Criado em 1997, é um dos jogos mais antigos do gênero. Nele, os jogadores podem desenvolver as habilidades de seus personagens, buscar tesouros, resolver enigmas e explorar áreas como cidades, masmorras, florestas, desertos, ilhas, praias, minas, etc. Os personagens podem disputar lutas entre si ou com criaturas, tais como monstros, dragões, demônios, orcs, utilizando armas e magias, enquanto os NPCs não podem ser atacados.</p> 
+                <p>Ao iniciar o jogo, o seu avatar começa na ilha de Dawnport, uma ilha onde todo jogador deve permanecer até desenvolver habilidades necessárias para o progresso e sobrevivência nos outros mapas do jogo. Quando o jogador atinge o nível 8, ele pode, opcionalmente, escolher a sua vocação e deixar a ilha. Em Dawnport, o jogador familiariza-se com o jogo e aprende muitas coisas sobre o mundo de Tibia, como magia ou usar flechas e espadas.</p>
+                <p>O jogo foi desenvolvido utilizando a linguagem de programação C++ em ambas versões de Windows e GNU/Linux.</p> 
+            </div>
+            <div class="column">
+                <h3>HISTÓRIA</h3>
+                <p>Em 1995 quatro estudantes da universidade de Regensburg se juntaram para criar um MMORPG, que veio a ser publicado pela alemã CipSoft em 1997. O game apostou em gráficos 2D bem simples e dessa maneira criou um universo vasto e leve para rodar em qualquer computador, inclusive em PC com conexão discada e também em lan houses.
+                Um fato interessante é que o game foi concebido sem som, algo que só foi atualizado em 2022. </p>
+                <p>Outro aspecto é que ele só tem o suporte para mensagens de texto em seus servidores, o que exige que os jogadores recorram ao TeamSpeak, ou o Discord, modelo mais atual para comunicação durante as partidas.</p>
+                <p>O cenário de Tibia possui florestas, cidades com comércio no estilo medieval e desertos. Porém, apesar de ter gráficos simples, o game vem evoluindo bastante. Ano a ano são lançadas novas atualizações do jogo, com novos monstros, cidades, missões e equipamentos.</p>
+                <p></p>
+            </div>
+            <div class="column">
+                <h3>COMO É O JOGO</h3>
+                <p>No game, cada jogador deve assumir o papel de aventureiro, visando desbravar uma terra, completamente desconhecida, repleta de desafios e muito grande.</p>
+                <p>Nesse trajeto, eles enfrentam seres que devem ser destruídos e outros usuários que podem ser seus aliados ou inimigos, ou seja, diversão garantida para você se entreter.</p>
+                <p>Vale ressaltar que não há destinos ou missões estabelecidas em Tibia. Dessa forma, cada personagem tem livre escolha para fazer o que desejar. O ponto inicial da trajetória no jogo é a ilha de Rookgaard, mas depois há uma imensidão de cenários para serem desbravados.</p>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-item">
+                <h3>Restrições do jogo</h3>
+                <div class="content">
+                    
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h3>Detalhes do Projeto</h3>
+                <div class="content">
+                    <p>Este projeto envolve a criação de um site dedicado aos fãs do jogo Tibia, um MMORPG clássico. O objetivo principal é fornecer uma plataforma centralizada onde os jogadores possam encontrar informações detalhadas sobre o jogo, compartilhar suas experiências e interagir com a comunidade.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h3>Equipe</h3>
+                <div class="content">
+                    <p>Mais informações sobre a equipe...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/groups/tibiadepressao"><img src="imagens/icon/facebook.png" alt="Facebook"></a>
+            <a href="https://x.com/Tibia"><img src="imagens/icon/twitter.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/tibiawiki/"><img src="imagens/icon/instagram.png" alt="Instagram"></a>
+            <a href="https://www.linkedin.com/groups/4352301/"><img src="imagens/icon/linkedin.png" alt="LinkedIn"></a>
+        </div>
+        <div class="contact-info">
+            <p>Endereço: Rua Exemplo, 123, Cidade, País</p>
+            <p>Telefone: (12) 3456-7890</p>
+            <p>Email: contato@tibiafansite.com</p>
+        </div>
+    </footer>
+</body>
+<script src="Js/scripts.js"></script>
+</html>
