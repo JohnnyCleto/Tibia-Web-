@@ -27,6 +27,7 @@ nav {
     display: flex;
     list-style: none;
     padding: 0;
+    transition: display 0.3s ease-in-out;
 }
 
 .nav-links li {
@@ -215,12 +216,6 @@ footer .contact-info p {
         display: none;
         flex-direction: row;
         width: 100%;
-        position: absolute left;
-        top: 60px;
-        left: 0px;
-        bottom: 20px;
-        background-color: #333;
-        z-index: 1000;
     }
 
     .menu-icon {

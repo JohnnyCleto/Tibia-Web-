@@ -41,6 +41,12 @@ menuIcon.addEventListener('click', () => {
     navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
 });
 
+document.addEventListener('click', (e) => {
+    if (!navLinks.contains(e.target) && !menuIcon.contains(e.target)) {
+        navLinks.style.display = 'none';
+    }
+});
+
 const accordionItems = document.querySelectorAll('.accordion-item h3');
 accordionItems.forEach(item => {
     item.addEventListener('click', () => {
