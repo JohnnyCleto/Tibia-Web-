@@ -55,19 +55,21 @@ menuIcon.addEventListener('click', () => {
 });
 
 document.addEventListener('click', (e) => {
-    if (!navLinks.contains(e.target) && !menuIcon.contains(e.target)) {
+    const isClickInsideNavLinks = navLinks.contains(e.target);
+    const isClickInsideMenuIcon = menuIcon.contains(e.target);
+    const isClickInsideAccordion = e.target.closest('.accordion-item') !== null;
+
+    if (!isClickInsideNavLinks && !isClickInsideMenuIcon && !isClickInsideAccordion) {
         navLinks.style.display = 'none';
     }
 });
 
 window.addEventListener('resize', checkScreenSize);
 
-
 const accordionItems = document.querySelectorAll('.accordion-item h3');
 accordionItems.forEach(item => {
     item.addEventListener('click', () => {
         const content = item.nextElementSibling;
         content.style.display = content.style.display === 'block' ? 'none' : 'block';
-
     });
 });
