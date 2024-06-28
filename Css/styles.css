@@ -213,7 +213,15 @@ footer .contact-info p {
 @media (max-width: 768px) {
     .nav-links {
         display: none;
-        flex-direction: column;
+        flex-direction: row;
+        width: 100%;
+        position: absolute left;
+        top: 60px;
+        left: 0px;
+        bottom: 20px;
+        background-color: #333;
+        z-index: 1000;
+
     }
 
     .menu-icon {

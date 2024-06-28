@@ -6,6 +6,12 @@ const images = [
     'imagens/fotos/tibia1.jpg',
     'imagens/fotos/tibia2.jpg',
     'imagens/fotos/tibia3.jpg',
+    'imagens/fotos/img_jogo.jpg',
+    'imagens/fotos/img_jogo1.jpg',
+    'imagens/fotos/img_jogo2.jpg',
+    'imagens/fotos/img_jogo3.jpg',
+    'imagens/fotos/img_jogo4.jpg',
+    'imagens/fotos/img_jogo5.jpg',
 ];
 
 function openLightbox(index) {
@@ -26,27 +32,25 @@ function changeImage(direction) {
         currentImageIndex = 0;
     }
     lightboxImg.src = images[currentImageIndex];
-}    // Lightbox
+}    
    
 
-    // Sidebar Menu
-    const menuIcon = document.querySelector('.menu-icon span');
-    const navLinks = document.querySelector('.nav-links');
-    menuIcon.addEventListener('click', () => {
-        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-    });
+const menuIcon = document.querySelector('.menu-icon span');
+const navLinks = document.querySelector('.nav-links');
+menuIcon.addEventListener('click', () => {
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+});
 
-    document.addEventListener('click', (e) => {
-        if (!navLinks.contains(e.target) && !menuIcon.contains(e.target)) {
-            navLinks.style.display = 'none';
-        }
-    });
+document.addEventListener('click', (e) => {
+    if (!navLinks.contains(e.target) && !menuIcon.contains(e.target)) {
+        navLinks.style.display = 'none';
+    }
+});
 
-    // Accordion
-    const accordionItems = document.querySelectorAll('.accordion-item h3');
-    accordionItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const content = item.nextElementSibling;
-            content.style.display = content.style.display === 'block' ? 'none' : 'block';
-        });
+const accordionItems = document.querySelectorAll('.accordion-item h3');
+accordionItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const content = item.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
     });
+});
