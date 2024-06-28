@@ -37,6 +37,19 @@ function changeImage(direction) {
 
 const menuIcon = document.querySelector('.menu-icon span');
 const navLinks = document.querySelector('.nav-links');
+
+function checkScreenSize() {
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    
+    if (!isMobile) {
+        navLinks.style.display = 'flex';
+    } else {
+        navLinks.style.display = 'none';
+    }
+}
+
+checkScreenSize();
+
 menuIcon.addEventListener('click', () => {
     navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
 });
@@ -47,10 +60,14 @@ document.addEventListener('click', (e) => {
     }
 });
 
+window.addEventListener('resize', checkScreenSize);
+
+
 const accordionItems = document.querySelectorAll('.accordion-item h3');
 accordionItems.forEach(item => {
     item.addEventListener('click', () => {
         const content = item.nextElementSibling;
         content.style.display = content.style.display === 'block' ? 'none' : 'block';
+
     });
 });
